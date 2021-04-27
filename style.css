@@ -1,0 +1,352 @@
+/*Global styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4,
+h5 {
+  font-size: 2rem;
+}
+p,
+input,
+label {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+button {
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  background-color: rgb(54, 90, 167);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+button:focus{
+  background: rgb(34, 52, 92);
+  outline-style: solid ;
+  outline-color:rgb(161, 191, 255) ;
+}
+button:hover {
+  background: rgb(44, 67, 117);
+}
+/* nav + intro-page*/
+
+.main-header {
+  background-color: #13141c;
+  /* position: fixed; */
+}
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  min-height: 10vh;
+  flex-wrap: wrap;
+  /* position: fixed; */
+}
+nav ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+#logo {
+  color: white;
+  flex: 2 1 40rem;
+  font-family: "Carter One", cursive;
+  font-weight: 400;
+}
+.intro-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/landing-page.jpg");
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.intro-page h3 {
+  padding: 2rem;
+  font-weight: 400;
+}
+/* nav ul li:nth-child(2){
+    border-left: #ffffff solid .1rem;
+    border-right: white solid .1rem;
+    padding: 0rem 3.5rem;
+} */
+
+/*Location Section*/
+#location {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.location-header {
+  width: 90%;
+  margin: auto;
+}
+.location-header h2 {
+  text-decoration: solid underline black 3px;
+  padding: 1rem 0rem;
+}
+.location-header h3 {
+  padding: 2rem 0rem;
+  background: linear-gradient(#3c1d04, #03506f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*moving Cloud Animation*/
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.moving-cloud-1 {
+  animation: cloudAnimation 13s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.4;
+  animation: cloudAnimation 13s infinite alternate ease-in-out;
+}
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -15%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/*Benefit SECTION*/
+.benefits-header {
+  background: #13141c;
+  min-height: 30vh;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.benefits-header h3 {
+  padding: 1rem;
+}
+.cards {
+  height: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  text-align: center;
+  margin: 2rem 5rem;
+  flex: 1 1 25rem;
+  min-height: 45vh;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.cards img {
+  max-width: 8rem;
+  margin: 2rem;
+}
+.card-icon-box {
+  background: #13141c;
+}
+.card h4,
+.card p {
+  padding: 2.3rem;
+}
+
+/*Contact Us Section*/
+.form{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+  url("./img/contact-mountain.png ");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-box{
+  background: rgba(19, 20, 28, 0.5);
+  border-radius: 2rem;
+  min-width: 50%;
+  text-align: center;
+  color: white;
+}
+.form-header{
+  padding:2rem;
+}
+.name-form,.email-form{
+  padding: 2rem;
+  margin: 2rem 1rem;
+}
+label{
+  margin: 3rem;
+}
+.submit-button{
+  width:100%;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  
+}
+input{
+  padding: 0.3rem 1rem;
+}
+
+/* footer Section*/
+.linkedin-icon img{
+   max-width: 20px;
+}
+
+footer{
+  background-color: #13141c;
+  color:white;
+}
+.footer-wrapper{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+.footer-wrapper h3{
+  flex: 1 1 40rem;
+}
+.footer-wrapper ul{
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+}
+
+/*meaia Quary*/
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+  }
+  .cloud {
+    height: 35rem;
+  }
+  .moving-cloud-2 {
+    top: 8%;
+  }
+  .location-header h3 {
+    background: rgba(19, 20, 28, 0.5);
+    -webkit-text-fill-color: white;
+    font-weight: 400;
+  }
+  .footer-wrapper h3{
+    text-align: center;
+  }
+  .form-box{
+    min-width: 100%;
+  }
+  /* .burger {
+    position: relative;
+    display: block;
+  }
+  .burger span{
+    padding: 0.2rem 2rem;
+    background: white;
+    display: block;
+    margin: 0.5rem 0.2rem;
+    transition: all 0.3s ease;
+  }
+  .list-items a {
+    color:black;
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+  .list-items {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+  .menu-check {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+    transform: translate(5%, -50%);
+    height: 5rem;
+    width: 5rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .menu-check:checked + .list-items {
+    transform: translate(-100%);
+  }
+  .menu-check:checked ~ .burger span {
+    background: white;
+  }
+  .menu-check:checked ~ .burger span:nth-child(1) {
+    transform: rotatez(45deg) translateY(300%) ;
+  }
+  .menu-check:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-check:checked ~ .burger span:nth-child(3) {
+    transform: rotatez(-45deg) translateY(-300%) ;
+  } */
+
+}
